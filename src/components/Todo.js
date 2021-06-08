@@ -1,7 +1,19 @@
 import React from 'react';
 
 const Todo = () => {
-  return <div></div>;
+  return (
+    <div className='todo'>
+      <li className='todo-item'></li>
+      <button>
+        {' '}
+        <i className='fas fa-check'></i>
+      </button>
+      <button>
+        {' '}
+        <i className='fas fa-trash'></i>
+      </button>
+    </div>
+  );
 };
 
 export default Todo;
