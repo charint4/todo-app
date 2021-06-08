@@ -23,8 +23,29 @@ function App() {
     }
   };
 
+  // Save to local
+  const saveLocalTodos = () => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  };
+
+  const getLocalTodos = () => {
+    if (localStorage.getItem('todos') === null) {
+      localStorage.setItem('todos', JSON.stringify([]));
+    } else {
+      let todoLocal = JSON.parse(
+        localStorage.getItem('todos', JSON.stringify(todos))
+      );
+      setTodos(todoLocal);
+    }
+  };
+
+  useEffect(() => {
+    getLocalTodos();
+  }, []);
+
   useEffect(() => {
     filterHandler();
+    saveLocalTodos();
   }, [todos, status]);
 
   return (
