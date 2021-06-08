@@ -101,8 +101,7 @@ form button:hover {
 }
 
 .completed {
-  text-decoration: line-through;
-  opacity: 0.5;
+ background: rgb(11, 212, 162);
 }
 
 /*CUSTOM SELECTOR */
