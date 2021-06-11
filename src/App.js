@@ -41,12 +41,12 @@ function App() {
 
   useEffect(() => {
     getLocalTodos();
-  }, [getLocalTodos]);
+  }, []);
 
   useEffect(() => {
     filterHandler();
     saveLocalTodos();
-  }, [todos, status,filterHandler, saveLocalTodos]);
+  }, [todos, status]);
 
   return (
     <div className='App'>
